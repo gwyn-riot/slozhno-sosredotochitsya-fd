@@ -1,2 +1,2 @@
 Работу выполнил Сухаревский Андрей.
-https://github.com/username/slozhno-sosredotochitsya-fd
+https://github.com/gwyn-riot/slozhno-sosredotochitsya-fd
