@@ -1,0 +1,22 @@
+:root.theme-dark {
+  --bg-image: url("/images/cover-image-dark.png");
+  --bg-color: #000028;
+  --decor-color: #ff0070;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --text-color: #000028;
+  --section-title-color: #ff0070;
+  --section-text-color: #f1b2ce;
+  --button-color: #ff0070;
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --link-color: #f1b2ce;
+  --link-shadow: #ff0070;
+}
+
+:root.theme-dark .header__rec {
+  display: block;
+}
+
+.theme-dark .header__rec {
+  display: block;
+}
