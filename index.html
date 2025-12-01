@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link rel="icon" type="./images/favicon.ico" href="/favicon.ico" />
-    <link rel="icon" type="./images/favicon.svg" href="/icon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
@@ -57,7 +60,7 @@
     <main class="main">
       <section class="section section__why">
         <h2 class="section__title">Почему сосредоточиться так сложно</h2>
-        <ul class="section__content__why">
+        <ul class="section__content cards-list">
           <li class="section__content__element">
             <h3 class="title-decor">Многозадачность</h3>
             <p class="section__text">
@@ -93,44 +96,48 @@
         <h2 class="section__title section__title__what">
           Что снижает концентрацию внимания?
         </h2>
-        <ul class="section__content__what">
-          <li class="section__content__element">
-            <h3 class="title-decor">Многозадачность</h3>
-            <p class="section__text">
-              Как концентрация может снижаться из-за… концентрации? Любая
-              стрессовая ситуация (и резко меняющийся мир в целом) заставляет
-              наш мозг постоянно «сканировать» окружающую среду на предмет
-              опасности. Например, читать новости вместо работы. Но быть
-              собранными всё время — невозможно. Концентрация — мышца, и она
-              может не выдержать, если не давать ей отдохнуть.
-            </p>
-          </li>
+        <div class="section__content__what">
+          <h3 class="title-decor gallery__title">5 простых правил</h3>
+          <ul class="cards-list cards-list-columns">
+            <li class="section__content__element">
+              <h4 class="title-decor">Многозадачность</h4>
+              <p class="section__text">
+                Как концентрация может снижаться из-за… концентрации? Любая
+                стрессовая ситуация (и резко меняющийся мир в целом) заставляет
+                наш мозг постоянно «сканировать» окружающую среду на предмет
+                опасности. Например, читать новости вместо работы. Но быть
+                собранными всё время — невозможно. Концентрация — мышца, и она
+                может не выдержать, если не давать ей отдохнуть.
+              </p>
+            </li>
 
-          <li class="section__content__element">
-            <h3 class="title-decor">Еда</h3>
-            <p class="section__text">
-              «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
-              доставляют в мозг энергию и помогают ему лучше работать. Но уходит
-              эта энергия также быстро, как и приходит. А мы в результате
-              попадаем на «углеводные качели»: как только действие «быстрых
-              углеводов» заканчивается, мы чувствуем усталость и сонливость. И
-              хотим ещё больше быстрых углеводов.
-            </p>
-          </li>
+            <li class="section__content__element">
+              <h4 class="title-decor">Еда</h4>
+              <p class="section__text">
+                «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
+                доставляют в мозг энергию и помогают ему лучше работать. Но
+                уходит эта энергия также быстро, как и приходит. А мы в
+                результате попадаем на «углеводные качели»: как только действие
+                «быстрых углеводов» заканчивается, мы чувствуем усталость и
+                сонливость. И хотим ещё больше быстрых углеводов.
+              </p>
+            </li>
 
-          <li class="section__content__element">
-            <h3 class="title-decor">Гаджеты</h3>
-            <p class="section__text">
-              Да-да, это та самая ситуация, когда на экране ноутбука — код, в
-              наушниках — подкаст, а на компьютере фоном — ещё и видео с
-              забавными утятами. В результате мозг пытается переключиться с
-              одной задачи на другую — и просто не может. А чтобы вернуться к
-              состоянию полной концентрации, человеку в среднем нужно 20 минут.
-              Вот и получается, что чем больше времени мы проводим в гаджетах,
-              тем больше времени затем нужно, чтобы вернуться к работе.
-            </p>
-          </li>
-        </ul>
+            <li class="section__content__element">
+              <h4 class="title-decor">Гаджеты</h4>
+              <p class="section__text">
+                Да-да, это та самая ситуация, когда на экране ноутбука — код, в
+                наушниках — подкаст, а на компьютере фоном — ещё и видео с
+                забавными утятами. В результате мозг пытается переключиться с
+                одной задачи на другую — и просто не может. А чтобы вернуться к
+                состоянию полной концентрации, человеку в среднем нужно 20
+                минут. Вот и получается, что чем больше времени мы проводим в
+                гаджетах, тем больше времени затем нужно, чтобы вернуться к
+                работе.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="section section__how">
@@ -138,7 +145,7 @@
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
-        <ul class="section__content__how">
+        <ul class="section__content cards-list">
           <li class="section__content__element">
             <h3 class="title-decor">
               5 простых (на самом деле не очень) советов
@@ -207,7 +214,7 @@
       </section>
 
       <section class="section gallery">
-        <h3 class="title-decor">А можно в картинках?</h3>
+        <h2 class="title-decor">А можно в картинках?</h2>
         <div class="gallery__content">
           <img
             src="./images/sunset.png"
@@ -217,7 +224,7 @@
           />
           <img
             src="./images/ice-cream.png"
-            alt="Мороженое в тарелками с мордочками котов - пример самопоощерения"
+            alt="Мороженое с мордочками котов в тарелке - пример самопоощерения"
             class="gallery__image"
             loading="lazy"
           />
@@ -246,5 +253,7 @@
     <footer class="footer decorated-zone">
       <h2 class="footer__title">focus</h2>
     </footer>
+
+    <script src="./scripts/script.js" defer></script>
   </body>
 </html>
