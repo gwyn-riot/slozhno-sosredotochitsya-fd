@@ -2,8 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-
-  min-width: 1024px;
+  min-inline-size: 1024px;
+  background-image: var(--bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +44,6 @@
   block-size: 100vh;
   min-block-size: 668px;
   position: relative;
-  background-image: var(--bg-image);
   min-height: 768px;
   padding: 20px;
 }
@@ -53,7 +52,6 @@
   justify-self: center;
   align-self: start;
   margin-block-start: 0px;
-  margin-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -84,6 +82,7 @@
   border-top: none;
   border-right: none;
   border-left: none;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -96,13 +95,14 @@
 }
 
 .header__rec {
+  display: block;
   position: absolute;
   top: 20px;
   right: 48px;
   color: var(--decor-color);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 18px;
-  font-weight: 400;
+  font-family: var(--main-font);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
   line-height: 25px;
   text-transform: uppercase;
 }
@@ -123,8 +123,8 @@
   justify-self: start;
   align-self: center;
   color: var(--title-color);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-family: var(--main-font);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: var(--font-weight-bold);
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -134,19 +134,18 @@
 .header__text {
   justify-self: end;
   align-self: center;
-  max-inline-size: 355px;
-  margin-block-start: -80px;
-  min-width: 491px;
-  height: 71px;
+  max-inline-size: min(491px, 50%);
+  margin-block-start: 114px;
+  line-height: var(--line-height-base);
 }
 
 .title-decor {
   background-color: var(--accent-color);
   color: var(--text-color);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
+  font-family: var(--main-font);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
   padding: 0;
 }
 
@@ -204,43 +203,43 @@
   outline: 1px solid var(--link-color);
 }
 
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cards-list-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery__title {
+  margin-bottom: 20px;
+}
+
 .section__why {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
 
-.section__content__why {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .section__what {
-  display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .section__title__what {
-  width: 315px;
-}
-
-.section__content__what {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  max-width: 315px;
 }
 
 .section__how {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
-}
-
-.section__content__how {
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
@@ -306,16 +305,16 @@
 
 .footer__title {
   color: var(--title-color);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--main-font);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: var(--font-weight-bold);
   line-height: 82.5%;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (width <= 1023px) {
+@media (width <= 1023px) and (width >= 768px) {
   .page {
-    min-width: 768px;
+    min-inline-size: 768px;
   }
 
   .header {
@@ -336,17 +335,13 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    min-width: auto;
-    margin-left: 0;
   }
 
   .header__text {
-    max-inline-size: 364px;
-    min-width: auto;
-    height: 117px;
-    margin-block-start: 0;
+    max-inline-size: min(364px, 50%);
+    margin-block-start: 162px;
     align-self: start;
-    margin-top: 20px;
+    margin-top: 55px;
   }
 
   .main {
@@ -354,25 +349,13 @@
     gap: 60px;
   }
 
-  .section__why {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .section__what {
-    gap: 20px;
-  }
-
   .section__title__what {
-    width: 236px;
+    max-width: 236px;
   }
 
-  .section__content__what {
+  .cards-list-columns {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .section__how {
-    grid-template-columns: 1fr 2fr;
   }
 
   .gallery__content {
@@ -381,32 +364,6 @@
       minmax(120px, 180px)
       minmax(150px, 220px)
       minmax(120px, 180px);
-    gap: 20px;
-  }
-
-  .gallery__content img:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1;
-  }
-
-  .gallery__content img:nth-child(2) {
-    grid-column: 3;
-    grid-row: 1 / 3;
-  }
-
-  .gallery__content img:nth-child(3) {
-    grid-column: 1;
-    grid-row: 2 / 4;
-  }
-
-  .gallery__content img:nth-child(4) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .gallery__content img:nth-child(5) {
-    grid-column: 2 / 4;
-    grid-row: 3;
   }
 
   .footer {
@@ -416,7 +373,7 @@
 
 @media (width <= 767px) {
   .page {
-    min-width: 375px;
+    min-inline-size: 375px;
   }
 
   .header {
@@ -438,10 +395,11 @@
 
   .header__text {
     max-inline-size: calc(100% - 20px);
-    margin: 10px;
+    margin-top: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
     align-self: start;
     grid-row: 3;
-    height: auto;
   }
 
   .main {
@@ -466,10 +424,10 @@
   }
 
   .section__title__what {
-    width: 100%;
+    max-width: 100%;
   }
 
-  .section__content__what {
+  .cards-list-columns {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -536,16 +494,5 @@
 
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-}
-
-@media (width >= 1024px) {
-  .page {
-    min-width: 1024px;
-  }
-
-  .header__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-inline-start: -20px;
   }
 }
