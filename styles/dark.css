@@ -1,5 +1,5 @@
 :root.theme-dark {
-  --bg-image: url("/images/cover-image-dark.png");
+  --bg-image: url("../images/cover-image-dark.png");
   --bg-color: #000028;
   --decor-color: #ff0070;
   --title-color: #db00ff;
